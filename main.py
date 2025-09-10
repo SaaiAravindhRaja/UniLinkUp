@@ -192,7 +192,8 @@ def main() -> None:
         logger.info("UniLinkUp bot is ready! Starting polling...")
         application.run_polling(
             allowed_updates=["message", "callback_query"],
-            drop_pending_updates=True
+            drop_pending_updates=True,
+            close_loop=False
         )
         
     except Exception as e:
