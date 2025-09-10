@@ -11,6 +11,7 @@ from ui.messages import MessageFormatter
 from ui.keyboards import KeyboardFactory
 from config.constants import ConversationState
 from models.user_session import UserSession
+from models.ping import PingRecord
 
 logger = logging.getLogger(__name__)
 
