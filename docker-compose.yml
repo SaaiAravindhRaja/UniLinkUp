@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  unilinkup-bot:
+    build: .
+    container_name: unilinkup-telegram-bot
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - DEBUG=${DEBUG:-false}
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
